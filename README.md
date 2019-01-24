@@ -1,5 +1,5 @@
 # DispNetCorr1D-Pytorch
-This repository only provides the 1D correlation function needed for DispNetCorr1D in Pytorch. I mainly made this because there are ample resources for Tensorflow implementation of the following Papers but the Pyotrch implementation have no 1D correlation layer. So I wrote my own. 
+This repository only provides the 1D correlation function needed for DispNetCorr1D in Pytorch. I mainly made this because there are ample resources for Tensorflow implementation of the following papers but the Pytorch implementation have no 1D correlation layer. So I wrote my own. 
 
 * [DispNetCorr1D](https://arxiv.org/abs/1703.01780) A Large Dataset to Train Convolutional Networks
 for Disparity, Optical Flow, and Scene Flow Estimation 
