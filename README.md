@@ -16,10 +16,8 @@ First Install all the relevant requirements given in the requirements.txt file i
 
  
 ### Dataset 
-This is just a sample so I included two pair of images as an example
-```
-./data-local/bin/prepare_cifar10.sh
-```
+This repo is just a sample so I included one pair of left and right images as an example as shown below
+
 ## Right Image
 
 ![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/0063R.png)
@@ -28,89 +26,24 @@ This is just a sample so I included two pair of images as an example
 
 ![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/0063L.png)
 
-###  Accuracy Achieved on Test Dataset
+###  Tensorflow Version
 
-A step by step series of examples that tell you how to get a development env running
+I replicated the tensor flow version from the following repository.
 
-Say what the step will be
+* [dispflownet-tf](https://github.com/fedor-chervinskii/dispflownet-tf) Tensorflow implementation of https://lmb.informatik.uni-freiburg.de/Publications/2016/MIFDB16
 
-```
-1. Supervised Only without BN : 76.6% 
-2. Mean Teacher without BN: 
-    a) Student Model : 83.58%
-    b) Teacher Model : 86.78%
-3. Mean Teacher with BN
-    a) Student Model : 84.4%
-    b) Teacher Model : 87.07%
-4. Mean Teacher + SNTG with BN
-    a) Student Model : 84.6%
-    b) Teacher Model : 87.28%
-5. Hybrid Network
-    a) Student Model : 84.18%
-    b) Teacher Model : 87.00%
-```
+### Pytorch Implementation 
 
+To make sure my version is exactly equal to the Tensorflow version I had to make sure that both of the following condition are checked:
 
-## Running the Training 
+1. Forward function
+2. Backward function
 
+## Forward Function 
 
-### Supervised Model Only (4000 labels of Cifar-10)
-Go the parameters.py and change the following flags as follows:
+![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/sample.png)
 
-1. supervised_mode = True ( To use only 4000 labels for training)
-2. lr = 0.15  ( setting the learning rate)
-3. BN = False  ( for turning batch Normalization on or off)
-4. sntg = False ( Do not use any SNTG loss )
-5. Do not change any other settings and run main.py
- Note that my baseline has not Batch Normalization in it. 
-### Mean Teacher Only 
-Go the parameters.py and change the following flags as follows:
-
-1. supervised_mode = False ( To use only 4000 labels for training)
-2. lr = 0.2  ( setting the learning rate)
-3. BN = False or True  ( for turning batch Normalization on or off)
-4. sntg = False ( Do not use any SNTG loss )
-5. Do not change any other settings and run main.py
-
-Note that my baseline has not Batch Normalization in it. However I tested mean teacher with both a BN and without BN
- 
-
-
-### Mean Teacher + SNTG Loss 
-Go the parameters.py and change the following flags as follows:
-
-1. supervised_mode = False ( To use only 4000 labels for training)
-2. lr = 0.2  ( setting the learning rate)
-3. BN = True  ( for turning batch Normalization on or off)
-4. sntg = True ( Do not use any SNTG loss )
-5. Do not change any other settings and run main.py
-
-### HybridNet  
-Go the parameters.py and change the following flags as follows:
-
-1. supervised_mode = False ( To use only 4000 labels for training)
-2. lr_hybrid = 0.2  ( setting the learning rate)
-3. BN = True  ( for turning batch Normalization on or off)
-4. sntg = False ( Do not use any SNTG loss )
-5. Do not change any other settings and run main_hybrid.py
-
-
-
-## Tensorboard Visualization
-To Visualize on Tensorboard, use the following command 
-```
-tensorboard --logdir=”path to ./ckpt”
-```
-Note that all the checkpoints are in the ./ckpt folder so simply start a tensorboard session to visualize it. Also all the saved checkpoints for student models are also saved there.
-```
-1. Baseline : 12-03-18:09/convlarge,Adam,200epochs,b256,lr0.15/test
-2. Mean teacher without BN :
-   12-03-20:12/convlarge,Adam,200epochs,b256,lr0.15/test
-   12-03-23:38/convlarge,Adam,200epochs,b256,lr0.2/test
-3. Mean Teacher with BN : 12-05-11:55/convlarge,Adam,200epochs,b256,lr0.2/test
-4. Hybrid Net : 12-06-10:58/hybridnet,Adam,200epochs,b256,lr0.2/test
-5. SNTG + Meant Teacher: 12-07-00:36/convlarge,Adam,200epochs,b256,lr0.2/test
-```
+## Backward Function 
 
 
 ## License
