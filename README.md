@@ -27,6 +27,10 @@ This repo is just a sample so I included one pair of left and right images as an
 
 ![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/0063L.png)
 
+### Running the Code
+
+Execute the main.py file.
+
 ###  Tensorflow Version
 
 I replicated the tensor flow version from the following repository.
@@ -47,7 +51,10 @@ As you can confirm by running the program that the Pytorch Version is exactly si
 ![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/sample.png)
 
 ## Backward Function 
-I made sure using Grad check that gradients were flowing correctly. For this uncomment this section and run again with scale = 0.05. If scale is very large the the Grad check takes a lot of time.
+I made sure using Grad check that gradients were flowing correctly. For this :
+
+1. Set gradCheck = True
+2. Set Scale = 0.05 
 
 ## License
 
