@@ -63,5 +63,7 @@ You can use my function with the following repository:
 
 ** [FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch) Pytorch implementation of FlowNet by Dosovitskiy et al.
 
-In the above simply modify FlowNet to make Dispnet and use my 1D Correlation function to get DispNetCorr1D
+** [SfmLearner-Pytorch](https://github.com/ClementPinard/SfmLearner-Pytorch) Pytorch version of SfmLearner from Tinghui Zhou et al.
+
+In the above simply modify FlowNet or DispnetS and use my 1D Correlation function to get DispNetCorr1D
 
