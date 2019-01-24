@@ -60,6 +60,8 @@ My implementation has been inspired from the following sources.
 ** [dispflownet-tf](https://github.com/fedor-chervinskii/dispflownet-tf) Tensorflow implementation of https://lmb.informatik.uni-freiburg.de/Publications/2016/MIFDB16
 
 You can use my function with the following repository: 
+
 ** [FlowNetPytorch](https://github.com/ClementPinard/FlowNetPytorch) Pytorch implementation of FlowNet by Dosovitskiy et al.
+
 In the above simply modify FlowNet to make Dispnet and use my 1D Correlation function to get DispNetCorr1D
 
