@@ -52,10 +52,12 @@ As you can confirm by running the program that the Pytorch Version is exactly si
 
 ## Backward Function 
 I made sure using Grad check that gradients were flowing correctly. For this :
-
+```
 1. Set gradCheck = True
-2. Set Scale = 0.05 
-
+2. Set scale = 0.05
+3. Run main.py
+4. You should be able to see "True" printed after execution which means Grad Check passed. 
+```
 ## License
 
 This project is licensed under the MIT License. 
