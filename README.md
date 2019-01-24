@@ -20,6 +20,13 @@ This is just a sample so I included two pair of images as an example
 ```
 ./data-local/bin/prepare_cifar10.sh
 ```
+## Right Image
+
+![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/0063R.png)
+
+## Left image
+
+![alt text](https://github.com/iSarmad/DispNetCorr1D-Pytorch/blob/master/0063L.png)
 
 ###  Accuracy Achieved on Test Dataset
 
